@@ -23,7 +23,7 @@ module.exports = {
           $gte: avaliacao, //busca por todos os filtros
         },
         preco: {
-          $gte: preco, //busca por todos os filtros
+          $lte: preco, //busca por todos os filtros
         },
         location: {
           $near: {
@@ -50,7 +50,7 @@ module.exports = {
           $gte: avaliacao, //busca por todos os filtros
         },
         preco: {
-          $gte: preco, //busca por todos os filtros
+          $lte: preco, //busca por todos os filtros
         },
         location: {
           $near: {
@@ -78,7 +78,7 @@ module.exports = {
           $in: servicosArray, //busca por todos os filtros
         },
         preco: {
-          $gte: preco, //busca por todos os filtros
+          $lte: preco, //busca por todos os filtros
         },
         location: {
           $near: {
@@ -179,7 +179,7 @@ module.exports = {
     ) {
       mecanicas = await Mecanica.find({
         preco: {
-          $gte: preco, //busca por todos os filtros
+          $lte: preco, //busca por todos os filtros
         },
         location: {
           $near: {
